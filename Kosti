@@ -1,0 +1,33 @@
+$fn=200;
+g=90;
+size=10;
+    module cif    ()    {
+        translate ([-1.2,0,size/3])
+        color("cyan")
+        text(t,size/3, valign = "center");
+                        }
+    module main     ()  {
+        intersection () {
+        sphere (d=size);
+        cube (size-size/4,true);
+                        }
+                        }
+        color("white")
+        main();
+        rotate ([g-g,g-g,g])
+        cif(t="1");
+      
+        rotate ([0,g+g,g])
+        cif(t="2");
+    
+        rotate ([0,g,g])
+        cif(t="3");
+     
+        rotate ([0,-g,g])
+        cif(t="4");
+     
+        rotate ([g,g,g])
+        cif(t="6.");
+    
+        rotate ([g,g,-g])
+        cif(t="5");
